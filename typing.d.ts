@@ -4,13 +4,14 @@ interface Board {
     columns: Map<TypeColumns, Column>
 }
 
-type TypeColumns = "todo" | "inprogress" | "done"
+type TypedColumns = "todo" | "inprogress" | "done"
 
 interface Column {
     id: TypeColumns,
     todos: Todo[]
 }
 interface Todo {
+    id: string,
     createdAt: number,
     updateAt: number,
     title: string,
