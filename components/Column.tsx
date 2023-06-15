@@ -55,6 +55,7 @@ function Column({id, todos, index}:Props) {
                                                 innerRef={provided.innerRef}
                                                 draggableProps={provided.draggableProps}
                                                 dragHandleProps={provided.dragHandleProps}
+                                                
                                             />
                                         )}
                                     </Draggable>
