@@ -1,13 +1,13 @@
 import { FieldValue } from "firebase/firestore"
 
 interface Board {
-    columns: Map<TypeColumns, Column>
+    columns: Map<TypedColumns, Column>
 }
 
 type TypedColumns = "todo" | "inprogress" | "done"
 
 interface Column {
-    id: TypeColumns,
+    id: TypedColumns,
     todos: Todo[]
 }
 interface Todo {
@@ -16,8 +16,5 @@ interface Todo {
     updateAt: number,
     title: string,
     status: string,
-    image?: Image
-}
-interface Image {
-    name: string,
+    image?: string
 }
